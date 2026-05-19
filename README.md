@@ -20,37 +20,56 @@ Storage: JSON files
 Architecture Style: modular structure with OOP principles
 
 project/
-│
-├── bot.py
-├── config.py
-├── requirements.txt
-├── .gitignore
-│
+├── bot.py                 
+
+├── config.py              
+
+├── requirements.txt       
+
+├── .gitignore             
+
 ├── data/
-│   └── history.json
-│
-├── handlers/
-│   ├── start.py
-│   ├── qr.py
-│   └── history.py
-│
-├── services/
-│   ├── qr_service.py
-│   └── file_manager.py
-│
-├── models/
-│   ├── base_qr.py
-│   ├── text_qr.py
-│   ├── url_qr.py
-│   ├── wifi_qr.py
-│   └── contact_qr.py
-│
-├── keyboards/
-│   └── menu.py
-│
-└── utils/
-    └── validators.py
-Architecture Overview
+
+│   └── history.json       
+
+
+├── handlers/              
+
+│   ├── start.py           
+
+│   ├── qr.py              
+
+│   └── history.py         
+
+
+├── services/              
+
+│   ├── qr_service.py      
+
+│   └── file_manager.py    
+
+
+├── models/               
+
+│   ├── base_qr.py         
+
+│   ├── text_qr.py         
+
+│   ├── url_qr.py        
+
+│   ├── wifi_qr.py         
+
+│   └── contact_qr.py      
+
+
+├── keyboards/            
+
+│   └── menu.py            
+
+
+└── utils/                 
+
+└── validators.py      
 
 The project is divided into logical modules:
 
