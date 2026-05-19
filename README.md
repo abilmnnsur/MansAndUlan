@@ -20,8 +20,7 @@ Storage: JSON files
 Architecture Style: modular structure with OOP principles
 
 project/
-
-│── main.py
+│
 ├── bot.py
 ├── config.py
 ├── requirements.txt
