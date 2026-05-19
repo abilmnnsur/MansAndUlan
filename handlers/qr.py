@@ -1,4 +1,4 @@
-from aiogram import Router, F
+from aiogram import F, Router
 from aiogram.types import Message, CallbackQuery, BufferedInputFile
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
@@ -16,7 +16,6 @@ from utils.validators import validate_input, validate_split_input
 router = Router()
 file_manager = FileManager(HISTORY_FILE)
 
-
 class QRForm(StatesGroup):
     choosing_type = State()
     waiting_data = State()
@@ -27,6 +26,13 @@ async def process_generate_button(message: Message, state: FSMContext):
     await state.set_state(QRForm.choosing_type)
     await message.answer("Выберите тип QR-кода:", reply_markup=get_qr_types_menu())
 
+@router.message(F.text == "Help")
+async def cmd_help(message: Message):
+    await message.answer("🛠 Помощь: выбери 'Generate QR' и следуй подсказкам для создания кода.")
+
+@router.message(F.text == "About")
+async def cmd_about(message: Message):
+    await message.answer("ℹ️ QR-Генератор v1.0\nРазработчики: Mans & Ulan")
 
 @router.callback_query(QRForm.choosing_type, F.data.startswith("qr_type_"))
 async def type_callback(callback: CallbackQuery, state: FSMContext):
@@ -42,7 +48,6 @@ async def type_callback(callback: CallbackQuery, state: FSMContext):
     }
     await callback.message.edit_text(prompts[qr_type])
     await callback.answer()
-
 
 @router.message(QRForm.waiting_data)
 async def data_received(message: Message, state: FSMContext):
@@ -61,9 +66,7 @@ async def data_received(message: Message, state: FSMContext):
             qr_obj = TextQR(text)
         elif qr_type in ["wifi", "contact"]:
             if not validate_split_input(text):
-                await message.answer(
-                    "Ошибка формата. Используйте запятую как разделитель."
-                )
+                await message.answer("Ошибка формата. Используйте запятую как разделитель.")
                 return
             p1, p2 = [p.strip() for p in text.split(",")]
             qr_obj = WifiQR(p1, p2) if qr_type == "wifi" else ContactQR(p1, p2)
