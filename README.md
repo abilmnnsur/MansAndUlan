@@ -111,3 +111,19 @@ python bot.py
 
 Conclusion
 This was one of the hardest project we had.We think that we have very well project,good structure and we believe that you will like our project.The hardest part was with handlers, but we fixed it and our project is done.We wish all of best to you and happy to be a student of you
+
+screens 
+start and menu <img width="1182" height="985" alt="image" src="https://github.com/user-attachments/assets/f791eda3-875d-41d9-a053-a6d80a6f1311" />
+
+types of QR 
+<img width="399" height="201" alt="image" src="https://github.com/user-attachments/assets/bce52d08-4a32-4324-b13f-d713313ddb66" />
+<img width="632" height="677" alt="image" src="https://github.com/user-attachments/assets/6208fec6-7707-43ff-97b9-c86405621b92" />
+<img width="619" height="689" alt="image" src="https://github.com/user-attachments/assets/75279a8b-537d-43c3-aa1e-71f70715079c" />
+<img width="653" height="805" alt="image" src="https://github.com/user-attachments/assets/247b159e-e5e9-4a4f-b5fa-03071151c4ef" />
+<img width="624" height="755" alt="image" src="https://github.com/user-attachments/assets/1e842920-2adb-4e87-a05d-4513ed10fe55" />
+
+history <img width="389" height="446" alt="image" src="https://github.com/user-attachments/assets/9e5ae130-5dc6-4d41-9664-b64dda21e33b" />
+
+help <img width="620" height="134" alt="image" src="https://github.com/user-attachments/assets/9af44173-31b7-4110-bb43-5d59bfbed8e7" />
+
+about <img width="432" height="137" alt="image" src="https://github.com/user-attachments/assets/2891b3ac-1677-40cb-b87b-38c3abc83c4e" />
